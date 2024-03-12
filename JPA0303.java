@@ -1,10 +1,10 @@
 package javh3;
 public class JPA0303 {
     public static void main(String[] args) {
-        System.out.print("Perfect numbers from 1 to 1000: ");
+        System.out.print("1~1000的完美數有:");
         for (int i = 1; i <= 1000; i++) {
             if (isPerfectNumber(i)) {
-                System.out.print("  "+i);
+                System.out.print(" "+i);
             }
         }
     }
