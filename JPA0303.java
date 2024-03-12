@@ -1,24 +1,21 @@
+package javh3;
 public class JPA0303 {
     public static void main(String[] args) {
-        int tot = 0;
-        for(int i=1 ; i <= 1000; i++){
-            for (int a=1 ; a <= i ; a++){
-                if (i%a == 0){
-                    tot += i;
-                }
-                if(i == a){
-                    if (tot == a){
-                        System.out.println(a);
-                        tot = 0;
-                        break;
-                    }else {
-                        tot =0;
-                        break;
-                    }
-                }
+        System.out.print("Perfect numbers from 1 to 1000: ");
+        for (int i = 1; i <= 1000; i++) {
+            if (isPerfectNumber(i)) {
+                System.out.print("  "+i);
             }
-                 
         }
-        System.out.printf("1~1000的完美數有 : ");
-    } 
+    }
+
+    public static boolean isPerfectNumber(int num) {
+        int sum = 0;
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+        return sum == num;
+    }
 }
